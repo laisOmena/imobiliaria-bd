@@ -1,4 +1,4 @@
-drop database imobiliaria;
+-- drop database imobiliaria;
 create database imobiliaria;
 
 use imobiliaria;
