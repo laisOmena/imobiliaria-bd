@@ -1,5 +1,7 @@
--- RETORNA A ÚLTIMA LINHA DA TABELA CONTRATO.
+-- DESATIVA A RESTRIÇÃO DO MYSQL
+SET GLOBAL log_bin_trust_function_creators = 1;
 
+-- RETORNA A ÚLTIMA LINHA DA TABELA CONTRATO.
 DELIMITER $$
 	create function getLastLine()
 		returns int
