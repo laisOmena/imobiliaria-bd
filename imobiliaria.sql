@@ -1,4 +1,4 @@
--- drop database imobiliaria;
+drop database imobiliaria;
 create database imobiliaria;
 
 use imobiliaria;
@@ -6,8 +6,9 @@ use imobiliaria;
 
 create table Imobiliaria(
     cnpj varchar(14) primary key not null,
-    nome varchar(30),
-    endereco varchar(30)
+    endereco varchar(30),
+    nome varchar(30)
+
 
 );
 
@@ -52,7 +53,7 @@ create table Contrato(
 );
 
 create table Historico(
-    protocolo int not null primary key,
+    protocolo int auto_increment primary key,
     dataHistorico date,
     descricao longtext,
     creciCorretor smallint(5),
