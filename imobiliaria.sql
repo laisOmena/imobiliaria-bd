@@ -40,7 +40,7 @@ create table Imovel(
 );
 
 create table Contrato(
-    numero int primary key not null,
+    numero int primary key not null auto_increment,
     tipo enum('venda', 'aluguel'),
     fiador tinyint,
     creciCorretor smallint(5),
