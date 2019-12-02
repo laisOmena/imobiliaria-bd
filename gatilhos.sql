@@ -1,4 +1,5 @@
-drop trigger atualiza_historico;
+/* TODA VEZ QUE UMA INSERÇÃO É FEITA NA TABELA CONTRATO, A TABELA HISTÓRICO É ATUALIZADA, PEGANDO
+   A MATRÍCULA DO IMÓVEL E O CRECI DO CORRETOR QUE VENDEU AQUELE IMÓVEL. */
 
 Delimiter $$
  create trigger  atualiza_historico after insert
@@ -6,7 +7,7 @@ Delimiter $$
     for each row
   begin
    insert into Historico(dataHistorico, creciCorretor, matImovel)
-   values(curdate(), (select * from getCreci), (select * from getMatricula));
+   values(curdate(), (select getCreci()), (select getMatricula()));
   end $$
 Delimiter ;
 

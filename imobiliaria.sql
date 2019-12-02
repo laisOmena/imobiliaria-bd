@@ -1,15 +1,11 @@
-drop database imobiliaria;
 create database imobiliaria;
 
 use imobiliaria;
-
 
 create table Imobiliaria(
     cnpj varchar(14) primary key not null,
     endereco varchar(30),
     nome varchar(30)
-
-
 );
 
 create table Corretor(
@@ -49,7 +45,6 @@ create table Contrato(
     foreign key (creciCorretor) references Corretor(creci),
     foreign key (cpfCliente) references Cliente(cpf),
     foreign key (matriculaImovel) references Imovel(matricula)
-
 );
 
 create table Historico(
