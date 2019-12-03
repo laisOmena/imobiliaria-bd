@@ -1,5 +1,4 @@
 -- RETORNA UMA TABELA COM OS CLIENTES E OS CORRETORES RELACIONADOS A ELE.
-
 create view getCorretorAndClientes as
 select cliente.nome as NomeCliente,cpf as CPFCliente, corretor.nome as NomeCorretor, creci as 
 	   CreciCorretor from corretor
